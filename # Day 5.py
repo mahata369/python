@@ -6,9 +6,9 @@
 for i in range (1,5):
     if i == 5:
          break
-     print(i,end=" ")
+    print(i,end=" ")
 
- print("break statement executed")
+print("break statement executed")
 
 #print first 5 even numbers (1,20)
 count=0
@@ -33,7 +33,7 @@ for i in range (1,6):
 #     pass
 
 #reverse a num
-123, output:321
+#input:123, output:321
 num=int(input("Enter multidigit number:"))
 rev=0
 while num>0:
