@@ -20,7 +20,7 @@
 ## Method of List:
 # append(), insert(), remove(), pop(), sort(), reverse(), length(), clear(), count(), index(), extend(), copy(), join(), slice(), min(), max(), sum(), etc.
 
-num = [1, 2, 3, 4, 5, 3, 2, 1, 1]
+#num = [1, 2, 3, 4, 5, 3, 2, 1, 1]
 
 # fruits = ["apple", "banana", "orange", "mango", "apple"]
 
