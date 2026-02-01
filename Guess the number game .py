@@ -118,5 +118,5 @@ while True:
 
     play_again =input("\nDo you want to play again?")
     if play_again != "y":
-        print("Bye! See you nect time")
+        print("Bye! See you next time")
         break
