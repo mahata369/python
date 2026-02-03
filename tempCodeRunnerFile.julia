@@ -1,0 +1,32 @@
+# Day 9
+# Dictionary: collection of data stored in key:value pair
+# """
+# syntax:
+# dict_name={
+#         key1:valuse1,
+#         key2:value2,
+#         .
+#         .
+#         .
+#         key-n:value-n
+# }
+# """
+#Example
+# student={"name":"Ram","age":20, "city":"kathmandu"}
+# print(student)
+
+# properties:
+# mutable
+# key-value Pair 
+# keys are unique
+# allows duplicate
+# unordered
+
+# Acessing values using key
+student ={"name":"Ram","age":20, "city":"kathmandu"}
+# print(student["name"])
+# print(student["age"])
+# print(student["city"])
+
+#Accessing values using get() method
+print(student.get("name"))
