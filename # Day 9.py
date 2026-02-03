@@ -112,11 +112,11 @@ fromkey():create dictionary with keys
 # print(dict(ls))
 
 #searching in dictionary
-# d={
-#     "name":["Ram","Shyam","Hari"],
-#     "age":[22,22,20],
-#     "address":["kathmandu","lalitpur","bhaktpur"]
-# }
+d={
+    "name":["Ram","Shyam","Hari"],
+    "age":[22,22,20],
+    "address":["kathmandu","lalitpur","bhaktpur"]
+}
 # found=False
 # for i in d["name"]:
 #     if i.lower() == "shyam":
@@ -124,5 +124,18 @@ fromkey():create dictionary with keys
 #         found=True
 # if not found:
 #     print("Not found")
+
+target = input("Enter name to be searched").lower()
+
+found = False
+count=0
+
+for i in d["name"]:
+    if i.lower()==target:
+        print(f"Found{target} at index{count}")
+    count += 1
+
+if not found:
+    print("Target not found")
 
     
