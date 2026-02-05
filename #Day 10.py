@@ -26,7 +26,7 @@ code reusability
 # def greet(name): # name is parameter and it is variable
 #     print(f"Hi {name}")
 
-# greet("Nimisha")#nimisha is argument
+# greet("Raj")#Raj is argument
 
 #Function with no parameter but return value
 # def greet():
@@ -47,10 +47,10 @@ code reusability
 # def greeting(name):
 #     str = f"Hello {name}"
 #     return str
-# print(greeting("Nimisha"))
+# print(greeting("padam"))
 
 #Default argument function
-# def greet(name="cma"):
+# def greet(name="raj"):
 #     print(f"Hello {name}")
 
 # greet()
@@ -77,8 +77,8 @@ code reusability
 #     for i in args:
 #         print(f"Hello {i}")
 
-# greet("Anuj","Nimisha")
-# greet("Cma")
+# greet("Anuj","Raj")
+# greet("Padam")
 
 #Keyword variable length arguments
 
@@ -91,9 +91,9 @@ code reusability
 # student(name="Ram",age=20)
 # student(name="Ram",age=20,city="Dhangadhi")
 
-# Nested dictioonary using keyword 
 
 
+#Day11
 #string methods
 
 # text="Hello world"
