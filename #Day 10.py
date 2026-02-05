@@ -24,7 +24,7 @@ code reusability
 
 #Function with parameter and no return value
 # def greet(name): # name is parameter and it is variable
-#     print(f"Hello {name}")
+#     print(f"Hi {name}")
 
 # greet("Nimisha")#nimisha is argument
 
@@ -59,8 +59,7 @@ code reusability
 #keyword argument function
 # def student(name,age):
 #     print(name,age)
-
-# student(age=20, name="anuj")
+# student(age=20, name="anuj")#order of argument and parameter doesnot matter here
 
 # Variable length argument function
 
@@ -71,7 +70,7 @@ code reusability
 #     return total
 
 # print(add(1,2,4))
-# print(add(10,20,40,50,2,6))
+# print(add(10,20,40,50,2,6))#we can pass many arguments in this functon
 
 #for string
 # def greet(*args):
@@ -91,3 +90,35 @@ code reusability
 
 # student(name="Ram",age=20)
 # student(name="Ram",age=20,city="Dhangadhi")
+
+# Nested dictioonary using keyword 
+
+
+#string methods
+
+# text="Hello world"
+# ''''''
+# ''''''
+
+
+
+# print(text.upper())
+# print(text.lower())
+# print(text.title())
+# print(text.strip())
+
+# str="Hello java"
+# print(str.replace("Java","Python"))
+
+# str1="Apple,Orange,Kiwi"
+# print(str1.split(","))
+
+# lst = ["Apple","Mango","Kiwi"]
+# print(" ".join(lst))
+
+# print(str1.find("Apple"))#it gives the index of list
+
+# print(str1.count(","))
+
+# print(str.startswith("Hello"))
+# print(str.endswith("java"))
