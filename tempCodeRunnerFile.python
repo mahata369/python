@@ -1,9 +1,43 @@
-Dictionary practise
+#Day 12 practise
+# Check whether given word is palindrome or not
+# def check_palindrome():
+#     str = input("Enter a word to check").lower()
+#     if str == str[::-1]:
+#         print("Palindrome")
+#     else:
+#         print("Not palindrome")
+# check_palindrome()
+
+# def check_armstrong(num):
+#     temp = num
+#     num_length = len(str(num))
+#     total = 0
+
+#     while temp > 0:
+#         digit = temp % 10
+#         total += digit ** num_length
+#         temp //= 10
+
+#     return total == num
 
 
-profile = {
-    "name" = "Nimisha",
-    "age" = 21,
-    "city" ="Dhangadhi",
-}
-print(profile)
+# print(check_armstrong(153))   # True
+# print(check_armstrong(370))   # True
+# print(check_armstrong(123))   # False
+
+
+# def check_armstrong(num):
+#     power = len(str(num))
+#     return sum(int(digit) ** power for digit in str(num)) == num
+
+# print(check_armstrong(153))
+
+text = "hello world"
+
+print(text.upper())
+print(text.lower())
+print(text.title())
+print(text.strip())
+print(text.replace("world","earth"))
+print(text.split())
+print(text.join(0))
