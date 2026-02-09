@@ -1,0 +1,120 @@
+# File handling:file handling allows to manipulate file(create,write data to, read data from files)
+
+'''
+steps involved in file handling:
+   open file
+   perform operation(read/write)
+   close file
+
+   syntax:
+   file -open("file_name","mode")
+
+   
+'''
+# Modes
+'''
+write mode:
+       create new files if not exists
+       Deletes old contents if dile already exists
+
+'''
+
+
+# file -open("data.txt","w")
+# file.write("Hello world...")
+# file.close()
+
+# '''
+# read mode: r
+#      read contents of file
+#      file must exist
+# '''
+# file -open("data.txt","r")
+# data = file.read()
+# print(data)
+# file.close()
+
+# '''
+# append mode: a
+#      adds data at the end of file
+#      doesn't overwrite old content
+# '''
+# file-open("data.txt","a")
+# file.write("Hello everyone,this is file handling")
+# file.close()
+
+
+'''
+read + write: r+
+     file must exist
+     can read and write
+'''
+# file = open("data.txt","r+")
+# print(file.read())
+# file.write("\nThis is new data")
+# file.close()
+'''
+write + read: w+
+      delete old data
+      can read and write
+'''
+# file = open("data.txt","w+")
+# file.write("Python file handling")
+# file.seek(0)# seek helps to point the pointer from last
+# print(file.read())
+# file.close()
+'''
+append + read: a+
+    create file if doesn't exist
+    intially pointer is at the end of the file
+'''
+# file = open("data.txt","a+")
+# file.write("\nNew data")
+# file.seek(0)
+# print(file.read())
+# file.close()
+
+
+# with open("data.txt","r") as file:
+#     print(file.read())
+
+
+# # From Gpt
+# file = open("data.txt", "w")
+# file.write("Hello world...")
+# file.close()
+
+# file = open("data.txt", "r")
+# data = file.read()
+# print(data)
+# file.close()
+
+# file = open("data.txt", "a")
+# file.write("\nHello everyone, this is file handling")
+# file.close()
+
+# Saving user input
+# name = input("Enter name:")
+# age = input("Enter age:")
+
+# with open("data.txt","a") as file:
+#     #file.write("\nName:" + name + "\nAge:" + age)
+#     file.write(f"\nName: {name} \nAge = {age}")
+# print("Data saved sucessfully")
+
+# Deleting the data entered by the user
+import os
+
+line_no = int(input("Enter line number to delete:"))
+
+with open("data.txt","r") as original, open("temp.txt","w") as temp:
+    for i, line in enumerate(original, start=1):
+        if i != line_no:
+            temp.write(line)
+
+os.remove("data.txt")
+os.rename("temp.txt","data.txt")
+
+print("Line deleted sucessfully")
+
+

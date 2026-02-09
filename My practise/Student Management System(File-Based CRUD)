@@ -1,0 +1,101 @@
+import os
+
+FILE_NAME = "student.txt"
+
+#CREATE
+def add_student():
+    sid = input("Enter id: ")
+    name = input("Enter Name: ")
+    age = input("Enter Age: ")
+    course = input("Enter Course: ")
+
+    with open(FILE_NAME, "a") as file:
+        file.write(f"{sid},{name},{age},{course}\n")
+    print("Student added sucessfully")
+
+# READ
+def view_students():
+    if not os.path.exists(FILE_NAME):
+        print("No records found")
+        return
+    
+    with open(FILE_NAME, "r") as file:
+        print("\n---Student Records---")
+        for line in file:
+            sid, name, age, course = line.strip().split(",")
+            print(f"id:{sid}|Name:{name}|Age:{age},|Course:{course}")
+
+
+# UPDATE(using temp file)
+def update_student():
+    sid = input("Enter student ID to update: ")
+    found = False
+
+    with open(FILE_NAME, "r") as file, open("temp.txt","w") as temp:
+        for line in file:
+            data = line.strip().split(",")
+            if data[0] == sid:
+                found = True
+                name =input("Enter new name: ")
+                age = input("Enter new age: ")
+                course = input("Enter new coursse: ")
+                temp.write(f"{sid},{name},{age},{course}\n")
+            else:
+                temp.write(line)
+
+    if found:
+        os.remove(FILE_NAME)    
+        os.rename("temp.txt", FILE_NAME)
+        print("Student updated sucessfully")
+    else:
+        os.remove("temp.txt")
+        print("Student not found")
+
+
+# DELETE (using temp file)
+def delete_student():
+    sid = input("Enter Student ID to delete: ")
+    found = False
+
+    with open(FILE_NAME,"r") as file, open("temp.txt", "w") as temp:
+        for line in file:
+            data = line.strip().split(",")
+            if data[0] == sid:
+                found = True
+            else:
+                temp.write(line)
+    
+    if found:
+        os.remove( FILE_NAME)
+        os.rename("temp.txt", FILE_NAME)
+        print("")
+        print("")
+        print("Student deleted successfully")
+    else:
+        os.remove("temp.txt")
+        print("Student not found")
+
+# MENU
+while True:
+    print("\n STUDENT MANAGEMENT SYSTEM")
+    print("1. Add Student")
+    print("2. View Students")
+    print("3. Update Student")
+    print("4. Delete Student")
+    print("5. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add_student()
+    elif choice == "2":
+        view_students()
+    elif choice == "3":
+        update_student()
+    elif choice == "4":
+        delete_student()
+    elif choice == "5":
+        print("Exiting")
+        break
+    else:
+        print("Invalid choice")

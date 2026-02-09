@@ -31,7 +31,7 @@ def update_student():
         age = input("Enter new age:").strip()
         address = input("Enter new address:").strip()
 
-        students[sid]:{"name":name, "age":age, "address":address}
+        students[sid] = {"name":name, "age":age, "address":address}
 
     else:
         print("No record found")
