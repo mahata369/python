@@ -59,10 +59,16 @@ TypeError:
 #     print("ValueError: Invalid value for typecast")
 
 # NameError
-try:
-   print(x)
+# x = 11
+# try:
+#    print(x)
     
-except NameError:
-    print("NameError: variable is not defined")
+# except NameError:
+#     print("NameError: variable is not defined")
+
+# indexError
+
+
+
      
 
