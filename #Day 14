@@ -7,7 +7,7 @@ steps involved in file handling:
    close file
 
    syntax:
-   file -open("file_name","mode")
+   file = open("file_name","mode")
 
    
 '''
@@ -15,14 +15,14 @@ steps involved in file handling:
 '''
 write mode:
        create new files if not exists
-       Deletes old contents if dile already exists
+       Deletes old contents if file already exists
 
 '''
 
 
-# file -open("data.txt","w")
-# file.write("Hello world...")
-# file.close()
+file = open("data.txt","w")
+file.write("Hello world...")
+file.close()
 
 # '''
 # read mode: r
