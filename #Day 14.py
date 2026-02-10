@@ -90,18 +90,39 @@ append + read: a+
 # print("Data saved sucessfully")
 
 # Deleting the data entered by the user
-import os
+# import os
 
-line_no = int(input("Enter line number to delete:"))
+# line_no = int(input("Enter line number to delete:"))
 
-with open("data.txt","r") as original, open("temp.txt","w") as temp:
-    for i, line in enumerate(original, start=1):
-        if i != line_no:
-            temp.write(line)
+# with open("data.txt","r") as original, open("temp.txt","w") as temp:
+#     for i, line in enumerate(original, start=1):
+#         if i != line_no:
+#             temp.write(line)
 
-os.remove("data.txt")
-os.rename("temp.txt","data.txt")
+# os.remove("data.txt")
+# os.rename("temp.txt","data.txt")
 
-print("Line deleted sucessfully")
+# print("Line deleted sucessfully")
+
+
+# Next method to delete data 
+target = input("Enter student name").strip().title()
+
+with open("data.txt","r") as file:
+    data = file.readline()
+
+with open("data.txt","w") as file:
+    found = False
+    for line in data:
+        if line.startswith(target + " ,"):
+            found = True
+            continue
+        file.write(line)
+
+if found:
+    print("Deleted")
+else:
+    print("Not found")
+        
 
 
