@@ -1,8 +1,13 @@
-def student(**data):#data is stored as dictionary here
-    print(data)
-    print(type(data))
-    for k,v in data.items():
-        print(k,":", v)
+import os
 
-student(name="Ram",age=20)
-student(name="Ram",age=20,city="Dhangadhi")
+line_no = int(input("Enter line number to delete:"))
+
+with open("data.txt","r") as original, open("temp.txt","w") as temp:
+    for i, line in enumerate(original, start=1):
+        if i != line_no:
+            temp.write(line)
+
+os.remove("data.txt")
+os.rename("temp.txt","data.txt")
+
+print("Line deleted sucessfully")

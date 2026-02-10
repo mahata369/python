@@ -1,5 +1,2 @@
 Python file handling
-New dataName:anuj
-Name:anuj
-Age:28
-Age = 22
+Age = 28

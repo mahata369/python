@@ -20,16 +20,16 @@ write mode:
 '''
 
 
-file = open("data.txt","w")
-file.write("Hello world...")
-file.close()
+# file = open("data.txt","w")
+# file.write("Hello world...")
+# file.close()
 
 # '''
 # read mode: r
 #      read contents of file
 #      file must exist
 # '''
-# file -open("data.txt","r")
+# file = open("data.txt","r")
 # data = file.read()
 # print(data)
 # file.close()
@@ -39,7 +39,7 @@ file.close()
 #      adds data at the end of file
 #      doesn't overwrite old content
 # '''
-# file-open("data.txt","a")
+# file=open("data.txt","a")
 # file.write("Hello everyone,this is file handling")
 # file.close()
 
@@ -79,19 +79,6 @@ append + read: a+
 #     print(file.read())
 
 
-# # From Gpt
-# file = open("data.txt", "w")
-# file.write("Hello world...")
-# file.close()
-
-# file = open("data.txt", "r")
-# data = file.read()
-# print(data)
-# file.close()
-
-# file = open("data.txt", "a")
-# file.write("\nHello everyone, this is file handling")
-# file.close()
 
 # Saving user input
 # name = input("Enter name:")
