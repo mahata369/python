@@ -1,0 +1,2 @@
+101,Anuj,22,Dhangadhi
+102,Sagar,24,Thali

@@ -106,23 +106,23 @@ append + read: a+
 
 
 # Next method to delete data 
-target = input("Enter student name").strip().title()
+# target = input("Enter student name").strip().title()
 
-with open("data.txt","r") as file:
-    data = file.readline()
+# with open("data.txt","r") as file:
+#     data = file.readline()
 
-with open("data.txt","w") as file:
-    found = False
-    for line in data:
-        if line.startswith(target + " ,"):
-            found = True
-            continue
-        file.write(line)
+# with open("data.txt","w") as file:
+#     found = False
+#     for line in data:
+#         if line.startswith(target + " ,"):
+#             found = True
+#             continue
+#         file.write(line)
 
-if found:
-    print("Deleted")
-else:
-    print("Not found")
+# if found:
+#     print("Deleted")
+# else:
+#     print("Not found")
         
 
 
