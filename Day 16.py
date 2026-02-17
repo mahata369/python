@@ -1,31 +1,32 @@
 #Student CRUD using file handling
 def add_student():
-   try:
+    try:
         name = input("Enter name: ")
         age = int(input("Enter age: "))
         marks = int(input("Enter marks: "))
-         # Creating new unique id
+        
+        # Creating new unique id
+        new_id = 1
         try:
-           with open("student.txt", "r") as f:
-            lines = f.readline()
-            if lines:
-               last_list = lines[-1]
-               last_id = int(last_list.split(",")[0])
-               new_id = last_id + 1
-            else:
-               new_id=1
-            f.write(f"{name},{age},{marks}\n")
-
-
+            with open("student.txt", "r") as f:
+                lines = f.readlines()  # Read all lines, not just one
+                if lines:
+                    last_line = lines[-1]  # Get the last line
+                    last_id = int(last_line.split(",")[0])
+                    new_id = last_id + 1
         except FileNotFoundError:
-         print("File not found")
-     # Adding data in the file
-   with open("student.txt","a") as f:
-     f.write(f"{new_id},{name},{age},{marks}\n")
-   print("Added sucessfully")
-
-   except FileNotFoundError:
-   print("File not found")
+            print("File not found, creating new file")
+        
+        # Adding data to the file
+        with open("student.txt", "a") as f:
+            f.write(f"{new_id},{name},{age},{marks}\n")
+        
+        print("Added successfully")
+    
+    except ValueError:
+        print("Invalid input. Please enter valid age and marks (numbers)")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 def view_student():
     try:
