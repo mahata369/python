@@ -139,6 +139,61 @@ private: acessible only inside class(syntax: __variable)
 # s.show()
 
 
+# Private Example
+
+# class Bank:
+#     def __init__(self):
+#         self.__balance = 1000
+
+#     def show(self):
+#         print(f"Balance {self.__balance}")
+
+# b = Bank()
+# b.show()
+
+#Program of all concept combined
+
+# class Demo:
+#     def __init__(self):
+#         self.name = "Ram"#public
+#         self._age = 20   #protected
+#         self._salary = 500 #Private
+
+#     # public method
+#     def show_public(self):
+#         print(self.name)
+
+
+#     # protected method
+#     def _show_protected(self):
+#         print(self._age)
+
+#     # private method
+#     def _show_private(self):
+#         print(self._salary)
+
+#     def show_private(self):
+#         self._show_private()
+
+# '''
+# d = {
+# name
+# _age
+# show_public()
+# _show_protected()
+# __show_private()
+# }
+# '''
+
+# d = Demo()
+
+# print(d.name) # allow
+# print(d._age) # allow(but not recommended)
+# # print(d._salary) # not allowed(throws error)
+
+# d.show_public()
+# d._show_private()
+# d._show_protected()
 
         
 
