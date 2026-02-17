@@ -71,35 +71,35 @@ obj = ClassName()
 # self:is a reference to the current object
 
 
-class Student:
-    def set_name(self,name):
-        self.Name=name
+# class Student:
+#     def set_name(self,name):
+#         self.Name=name
 
-    def show(self):
-        print(self.Name)
+#     def show(self):
+#         print(self.Name)
 
-s1= Student()
-s1.set_name("Ram")
-s1.show()
+# s1= Student()
+# s1.set_name("Ram")
+# s1.show()
 
-# Student.set_name(s1,"Ram")
+# # Student.set_name(s1,"Ram")
 
-class Counter:
-    def __init__(self):
-        self.count=0
+# class Counter:
+#     def __init__(self):
+#         self.count=0
 
-    def increment(self):
-        self.count += 1
+#     def increment(self):
+#         self.count += 1
 
-c1 = Counter()
-c2 = Counter()
+# c1 = Counter()
+# c2 = Counter()
 
-c1.increment()
-c1.increment()
-c2.increment()
+# c1.increment()
+# c1.increment()
+# c2.increment()
 
-print(c1.count)
-print(c2.count)
+# print(c1.count)
+# print(c2.count)
 
         
        
