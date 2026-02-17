@@ -111,6 +111,7 @@ private: acessible only inside class(syntax: __variable)
 
 '''
 # Public Example
+
 # class Student:
 #     def __init__(self):
 #         self.name = "Ram"  # Public varialble
@@ -122,7 +123,10 @@ private: acessible only inside class(syntax: __variable)
 # print(s.name)
 # s.show()
 
+
+
 # Protected Example
+
 # class Person:
 #     def __init__(self):
 #         self._age = 20  # protected variable
