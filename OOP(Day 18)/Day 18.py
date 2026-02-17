@@ -101,5 +101,42 @@ obj = ClassName()
 # print(c1.count)
 # print(c2.count)
 
+'''
+Acess control:
+Deciding which data can be  accessed from  outside the class and which should be hidden
+
+public: acessible everywhere(default)
+protected: accessible in class and child class(_variable)
+private: acessible only inside class(syntax: __variable)
+
+'''
+# Public Example
+# class Student:
+#     def __init__(self):
+#         self.name = "Ram"  # Public varialble
+
+#     def show(self):
+#         print(self.name)
+
+# s = Student()
+# print(s.name)
+# s.show()
+
+# Protected Example
+# class Person:
+#     def __init__(self):
+#         self._age = 20  # protected variable
+
+# class Student(Person):
+#     def show(self):
+#         print(f"Age {self._age}")
+
+# s = Student()
+# s.show()
+
+
+
+        
+
         
        
