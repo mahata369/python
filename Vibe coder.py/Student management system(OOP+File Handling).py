@@ -27,22 +27,23 @@ class StudentManager:
         print("Student added sucessfully")
 
 
-# View Students
-
-def view_students(self):
-    try:
+    # View Students
+    def view_students(self):
+     try:
         with open(self.filename, "r") as f:
             for line in f:
                 sid, name, age, marks = line.strip().split(",")
                 student = Student(sid, name, age, marks)
                 student.display()
-    except FileNotFoundError:
+     except FileNotFoundError:
         print("No data found")
 
+
+    
 # Search Student
 
-def search_student(self):
-    target = input("Enter namr to search: ").title()
+    def search_student(self):
+     target = input("Enter namr to search: ").title()
 
     with open(self.filename, "r") as f:
         found = False
@@ -55,10 +56,10 @@ def search_student(self):
         if not found:
             print("Student not found")
 
-# Delete Student
 
-def delete_student(self):
-    target = input("Enter name to delete: ").title()
+# Delete Student
+    def delete_student(self):
+        target = input("Enter name to delete: ").title()
 
     try:
         with open(self.filename, "r") as f:
@@ -82,6 +83,7 @@ def delete_student(self):
 
     except FileNotFoundError:
         print("No data found")
+
 
 
 # Main menu
@@ -113,6 +115,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
 
 
 
