@@ -1,0 +1,1 @@
+print(d.__salary) # not allowed(throws error)

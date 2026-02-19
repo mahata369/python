@@ -33,7 +33,7 @@ obj = ClassName()
 #     def greet(self,name):
 #         print(f"Welcome {name}")
 
-# name = input("Enter name: ")
+# # name = input("Enter name: ")
 # student1 = Student()
 # student1.greet("Anuj")
 
@@ -51,7 +51,7 @@ obj = ClassName()
 
 # class Person:
 #     def __init__(self,name,age):
-#         self.name=name
+#         self.name = name
 #         self.age = age
 
 #     def display(self):
@@ -82,7 +82,7 @@ obj = ClassName()
 # s1.set_name("Ram")
 # s1.show()
 
-# # Student.set_name(s1,"Ram")
+# Student.set_name(s1,"Ram")
 
 # class Counter:
 #     def __init__(self):
@@ -95,7 +95,7 @@ obj = ClassName()
 # c2 = Counter()
 
 # c1.increment()
-# c1.increment()
+# c2.increment()
 # c2.increment()
 
 # print(c1.count)
@@ -117,7 +117,7 @@ private: acessible only inside class(syntax: __variable)
 #         self.name = "Ram"  # Public varialble
 
 #     def show(self):
-#         print(self.name)
+#         pass
 
 # s = Student()
 # print(s.name)
@@ -157,7 +157,9 @@ private: acessible only inside class(syntax: __variable)
 #     def __init__(self):
 #         self.name = "Ram"#public
 #         self._age = 20   #protected
-#         self._salary = 500 #Private
+#         self.__salary = 500 #Private
+
+        
 
 #     # public method
 #     def show_public(self):
@@ -170,30 +172,30 @@ private: acessible only inside class(syntax: __variable)
 
 #     # private method
 #     def _show_private(self):
-#         print(self._salary)
+#         print(self.__salary)
 
 #     def show_private(self):
-#         self._show_private()
+#         self.show_private()
 
-# '''
-# d = {
-# name
-# _age
-# show_public()
-# _show_protected()
-# __show_private()
-# }
-# '''
+# # '''
+# # d = {
+# # name
+# # _age
+# # show_public()
+# # _show_protected()
+# # __show_private()
+# # }
+# # '''
 
 # d = Demo()
 
 # print(d.name) # allow
 # print(d._age) # allow(but not recommended)
-# # print(d._salary) # not allowed(throws error)
+# # print(d.__salary) # not allowed(throws error)
 
 # d.show_public()
-# d._show_private()
 # d._show_protected()
+# d._show_private()
 
         
 

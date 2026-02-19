@@ -22,7 +22,7 @@ class Child(Parent):
 # s.display()
 
 # p = Person()
-# p.display()
+# p.show()
 
 # Inheritance with constructor
 
@@ -37,6 +37,7 @@ class Child(Parent):
 # s = Student("Ram")
 # s.display()
 
+
 # Super() keyword
 
 class Person:
@@ -44,7 +45,7 @@ class Person:
         print("Parent constructor called")
         self.name = name
 
-    def show():
+    def show(self):
         print("Student information:")
 
 class Student(Person):
@@ -59,5 +60,9 @@ class Student(Person):
 
 s = Student("Ram", 101)
 s.display()
+
+
+
+
 
 

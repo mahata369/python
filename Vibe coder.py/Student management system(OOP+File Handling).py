@@ -45,7 +45,7 @@ class StudentManager:
     def search_student(self):
      target = input("Enter namr to search: ").title()
 
-    with open(self.filename, "r") as f:
+    with open(self.filename, "r") as f: # type: ignore
         found = False
         for line in f:
             sid, name, age, marks = line.strip().split(",")

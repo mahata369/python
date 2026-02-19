@@ -1,0 +1,39 @@
+'''
+Method Overriding: a child provides its own implementation of the method  that already exist in parent class
+Rules of method overiding:
+-same method name
+-same parameter
+- Happens only in inheritance
+- child method get priority first
+'''
+# class Animal:
+#     def sound(self):
+#         print("Animal produce sound")
+
+# class Dog(Animal):
+#     def sound(self): # overriden method
+#         print("Dog barks")
+
+# d = Dog()
+# d.sound()
+
+
+class Bank:
+    def interest(self):
+        print("General interest rate: 5%")
+
+
+class HimalayanBank(Bank):
+    def interest(self):
+        print("Himalayan bank interest rate: 7%")
+
+class GlobalIME(Bank):
+    def interest(self):
+        print("Global IME interest rate: 5.5%")
+
+hmb = HimalayanBank()
+hmb.interest()
+
+glb = GlobalIME()
+glb.interest()
+
