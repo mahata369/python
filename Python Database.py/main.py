@@ -7,7 +7,7 @@ conn= mysql.connector.connect(
     host="localhost",
     user="root",
     password="369369#",
-    database="school"
+    database="collage"
 )
 if conn:
     print("connected to database")
@@ -41,7 +41,9 @@ while True:
         sql="Select* from students"
         cursor.execute(sql)
         result=cursor.fetchall()
+        print(type("sql students"))
         print("ID Name Age City")
+        
 
         for row in result:
             print(row)
@@ -59,7 +61,7 @@ while True:
         sid=int(input("Enter id to be deleted"))
         
 
-        sql = "DELLETE FROM students WHERE id=%s"
+        sql = "DELETE FROM students WHERE id=%s"
         cursor.execute(sql,(sid,))
         conn.commit()
         print("Record deleted sucessfully")
