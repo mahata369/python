@@ -33,9 +33,17 @@ def view_student():
 
         cursor.execute("Select*from students")
         records= cursor.fetchall()
+        print(records)
         print("\nID\tName\tAge\tCity")
         for row in records:
-            print(f"{row[0]}\t{row[1]}\t{row[2]}")
+            print(f"{row[0]}\t{row[1]}\t{row[2]}\t{row[3]}")
+    
+    except Exception as e:
+        print("Error occured while fetching data ", e)
+    
+    finally:
+        cursor.close()
+        conn.close()
 
     
 def update_student():
@@ -47,12 +55,17 @@ def update_student():
             sid=int(input("Enter student id to be updated"))
             city=input("Enter city to be updated")
 
-            sql = "UPDATE student SET city=%s WHERE id=%s"
-            cursor.exrcute(sql,(city,sid))
+            sql = "UPDATE students SET city=%s WHERE id=%s"
+            cursor.execute(sql,(city,sid))
             conn.commit()
 
+            if cursor.rowcount==0:
+                print("Student not found")
+            else:
+                print("Student updated successfully")
+
     except Exception as e:
-        print("Error occured while updating  student",e)
+        print("Error occured while updating  student", e)
 
     finally:
         cursor.close()
@@ -66,11 +79,11 @@ def delete_student():
         if conn is not None:
             cursor = conn.cursor()
 
-            sid=int(input("Enter student id to be updated"))
-            city=input("Enter city to be updated")
+            sid=int(input("Enter student id to be deleted"))
+            
 
-            sql = "DELETE FROM  student  WHERE id=%s"
-            cursor.exrcute(sql, (sid,))
+            sql = "DELETE FROM  students  WHERE id=%s"
+            cursor.execute(sql, (sid,))
             conn.commit()
 
             if cursor.rowcount==0:
@@ -79,7 +92,7 @@ def delete_student():
                 print("Student deleted sucessfully")
 
     except Exception as e:
-        print("Error occured while updating  student",e)
+        print("Error occured while deleting  data", e)
 
     finally:
         cursor.close()
@@ -91,26 +104,23 @@ def search_student():
         if conn is not None:
             cursor = conn.cursor()
 
-            name=int(input("Enter name to search"))
+            name=(input("Enter name to be search"))
             
 
-            sql = "SELECT*FROM student WHERE name=%s"
-            cursor.exrcute(sql, (name,))
+            sql = "SELECT*FROM students WHERE name=%s"
+            cursor.execute(sql, (name,))
             result = cursor.fetchall()
 
             if len(result)==0:
                 print("No record found")
             else:
-                print(f"{ID[0]}\t{name[1]}\t{age[2]}")
-                
-
-            if cursor.rowcount==0:
-                print("student not found")
-            else:
-                print("Student deleted sucessfully")
+                print("\nID\tName\tAge\tCity")
+                for row in result:
+                    print(f"{row[0]}\t{row[1]}\t{row[2]}\t{row[3]}")
+        
 
     except Exception as e:
-        print("Error occured while updating  student",e)
+        print("Error occured while searching  student",e)
 
     finally:
         cursor.close()
@@ -132,12 +142,13 @@ while True:
     elif choice == 2:
         view_student()
     elif choice == 3:
-        update_student
+        update_student()
     elif choice == 4:
         delete_student()
-    elif choice == 4:
+    elif choice == 5:
         search_student()
     elif choice == 6:
         print("Exiting...")
+        break
     else:
         print("Invalid choice")
