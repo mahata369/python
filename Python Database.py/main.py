@@ -40,7 +40,7 @@ while True:
     elif choice==2:
         sql="Select* from students"
         cursor.execute(sql)
-        result=cursor.fetchall()
+        result=cursor.fetchall()#fetchall() stores data in list
         print(type("sql students"))
         print("ID Name Age City")
         
