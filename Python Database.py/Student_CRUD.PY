@@ -36,7 +36,7 @@ def view_student():
         print(records)
         print("\nID\tName\tAge\tCity")
         for row in records:
-            print(f"{row[0]}\t{row[1]}\t{row[2]}\t{row[3]}")
+            print(f"{row[0]}\t{row[1]}\t{row[2]}\t{row[3]}") #it prints list inside tuple
     
     except Exception as e:
         print("Error occured while fetching data ", e)
