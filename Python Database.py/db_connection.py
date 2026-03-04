@@ -11,7 +11,7 @@
 #         print("Database connection error:", e)
 #         return None
 
-# It is another Custom Database Module
+# It is another Custom Database Module to connect to the database
 import mysql.connector
 
 def get_connection():
